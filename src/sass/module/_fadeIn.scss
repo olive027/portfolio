@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.fadeIn {
+	animation: fadeInAnime 3.5s ease 0.5 forwards;
+}
+
+@keyframes fadeInAnime {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.works-list {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: rem(20);
+	@include mq(md){
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		gap: rem(40);
+	}
+}

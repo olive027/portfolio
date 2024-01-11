@@ -20,22 +20,128 @@
   <link rel="icon" href="" />
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__name">
+        <a class="header__nameLink" href="#">Sayaka Portfolio</a>
+      </h1>
+      <nav class="header__pc-nav pc-nav">
+        <div class="pc-nav__inner">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item"><a href="">home</a></li>
+            <li class="pc-nav__item"><a href="">works</a></li>
+            <li class="pc-nav__item"><a href="">skill</a></li>
+            <li class="pc-nav__item"><a href="">about</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <div class="sp-nav__inner">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item"><a href="">home</a></li>
+            <li class="sp-nav__item"><a href="">works</a></li>
+            <li class="sp-nav__item"><a href="">skill</a></li>
+            <li class="sp-nav__item"><a href="">about</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </header>
   <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+    <div class="mv">
+      <div class="mv__inner">
+        <div class="mv__image-wrap">
+          <figure class="mv__image fadeIn">
+            <img src="./assets/images/common/mv_image4-tanesashi.jpg" alt="種差海岸の画像">
+          </figure>
+          <figure class="mv__image fadeIn">
+            <img src="./assets/images/common/mv_image1-aso.jpg" alt="阿蘇ミルクロードの夜明けの画像">
+          </figure>
+          <figure class="mv__image fadeIn">
+            <img src="./assets/images/common/mv_image5-hakodate.jpg" alt="冬の函館五稜郭の画像">
+          </figure>
+          <figure class="mv__image fadeIn">
+            <img src="./assets/images/common/mv_image3-biei.jpg" alt="美瑛のパッチワーク農地の画像">
+          </figure>
+          <figure class="mv__image fadeIn">
+            <img src="./assets/images/common/mv_image2-hirosaki.jpg" alt="満開の桜と弘前城のお濠の画像">
+          </figure>
+        </div>
+        <div class="mv__title-wrap">
+          <p class="mv__subtitle js-subtitle">kondo sayaka</p>
+          <h1 class="mv__title js-title">portfolio</h1>
+        </div>
+      </div>
+    </div>
+    <div class="works">
+      <div class="works__inner inner">
+        <ul class="works__list works-list">
+          <li class="works-list__item item">
+            <div class="item__image">
+              <img src="./assets/images/common/k-works.png" alt="架空コーポレートサイト「K-WORKS」の画面画像">
+            </div>
+            <div class="item__body">
+              <p class="item__info">架空コーポレートサイト</p>
+              <div class="item__category category">
+                <p class="category__piece">デザイン</p>
+                <p class="category__piece">コーディング</p>
+              </div>
+            </div>
+          </li>
+          <li class="works-list__item item">
+            <div class="item__image">
+              <img src="./assets/images/common/k-works.png" alt="架空コーポレートサイト「K-WORKS」の画面画像">
+            </div>
+            <div class="item__body">
+              <p class="item__info"></p>
+              <div class="item__category category">
+                <p class="category__piece"></p>
+              </div>
+            </div>
+          </li>
+          <li class="works-list__item item">
+            <div class="item__image">
+              <img src="./assets/images/common/k-works.png" alt="架空コーポレートサイト「K-WORKS」の画面画像">
+            </div>
+            <div class="item__body">
+              <p class="item__info"></p>
+              <div class="item__category category">
+                <p class="category__piece"></p>
+              </div>
+            </div>
+          </li>
+          <li class="works-list__item item">
+            <div class="item__image">
+              <img src="./assets/images/common/k-works.png" alt="架空コーポレートサイト「K-WORKS」の画面画像">
+            </div>
+            <div class="item__body">
+              <p class="item__info"></p>
+              <div class="item__category category">
+                <p class="category__piece"></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
     </div>
   </main>
   <footer>
 
   </footer>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

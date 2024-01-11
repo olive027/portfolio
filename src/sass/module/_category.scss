@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.category {
+	display: flex;
+	gap: rem(10);
+}
+
+.category__piece {
+	font-size: rem(14);
+	color: $white;
+	background-color: $green;
+	padding: rem(5) rem(8);
+	border-radius: rem(3);
+}
