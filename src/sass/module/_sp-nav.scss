@@ -24,16 +24,32 @@
 
 .sp-nav__item a {
 	display: block;
+	font-family: $en-font;
 	color: #fff;
 	letter-spacing: 0.03em;
 	text-transform: capitalize;
 	padding: rem(15) rem(10);
 	margin: rem(10) 0;
 	cursor: pointer;
-	transition: opacity .6s;
-	&:hover {
-		opacity: .6;
-	}
+	position: relative;
+}
+
+.sp-nav__item a::after {
+	content: '';
+	position: absolute;
+	top: 75%;
+	left: 10%;
+	width: 80%;
+	height: 2px;
+	background: $white;
+	transition: transform .3s;
+	transform: scale(0, 1);/*X方向0、Y方向1*/
+	transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.sp-nav__item a:hover::after {
+	transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
 .sp-nav.is-active {

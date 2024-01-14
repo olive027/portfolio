@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.footer {
+	margin-top: rem(75);
+	@include mq(md){
+		margin-top: rem(120);
+	}
+	width: 100%;
+	background: rgba(211, 239, 242, 0.65);
+}
+
+.footer__inner {
+	padding: rem(50) 0 rem(20);
+}
+
+.footer-nav__items {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: rem(48);
+}
+
+.footer-nav__item a {
+	font-size: rem(14);
+	font-family: $en-font;
+	color: $green;
+	text-transform: capitalize;
+	@include mq(md){
+		font-size: rem(16);
+	}
+}
+
+.footer-nav__item a:hover {
+	opacity: .6;
+}
+
+.footer__copy {
+	display: inline-block;
+	display: flex;
+	justify-content: center;
+	font-size: rem(12);
+	color: $green;
+	opacity: 0.4;
+	text-transform: capitalize;
+	margin-top: rem(30);
+}

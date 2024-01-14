@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.pagetop {
+	position: fixed;
+	right: rem(15);
+	bottom: rem(16);
+	z-index: 100;
+	@include mq(md){
+		right: rem(20);
+		bottom: rem(20);
+	}
+}
+
+.pagetop a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: rem(50);
+	height: rem(50);
+	border-radius: 50%;
+	background: $white;
+	box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.pagetop img {
+	width: 30%;
+}
+
+.pagetop a:hover{
+	opacity: .6;
+}

@@ -26,9 +26,6 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	@include mq(md){
-		border-radius: rem(10);
-	}
 }
 
 .mv__image:nth-of-type(1) {
@@ -83,12 +80,13 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 	text-align: center;
-	text-transform: capitalize;
+	font-family: $en-font;
 }
 
 .mv__subtitle {
+	text-transform: capitalize;
 	font-size: clamp(2rem, 1.384rem + 2.63vw, 3.75rem);
-	font-weight: $bold;
+	font-weight: $normal;
 	letter-spacing: 0.05em;
 	color: $green;
 	text-shadow: 4px 3px 5px rgba(26, 44, 52, 0.55);
@@ -100,4 +98,10 @@
 	letter-spacing: 0.03em;
 	color: $green;
 	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.64);
+}
+
+.mv__title span {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100%);
 }

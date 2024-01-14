@@ -15,7 +15,6 @@ $padding-sp: 20px;
 
 $base-font: 'Noto Sans JP',sans-serif;
 $en-font: "futura-pt", sans-serif;
-// ※検証ツールでしっかり反映されているか確認する
 
 body {
   font-family: $base-font;
@@ -30,8 +29,8 @@ $bold: 700;
 // 色の指定
 ////////////////////
 
-//色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
+//色指定
+$black: #0b4047;
 $white: #fff;
 $peach: #fca07c;
 $green: #18aaba;

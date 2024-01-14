@@ -1,20 +1,33 @@
 @use "global" as *;
 
+.item:hover .item__image img {
+	opacity: .7;
+	transform: scale(1.08);
+}
+
+.item__image {
+	height: rem(210);
+}
+
 .item__image img {
-	box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
 	width: 100%;
 	height: 100%;
-	object-fit: cover;;
+	object-fit: cover;
+	transition: opacity .6s, transform .5s;
 }
 
 .item__body {
-	margin-top: rem(24);
-	// text-align: center;
+	margin-top: rem(20);
 }
 
 .item__info {
-	font-size: rem(18);
+	font-size: rem(15);
 	color: $black;
+	font-weight: $bold;
 	letter-spacing: 0.03em;
 	line-height: 1.2;
+	@include mq(md){
+		font-size: rem(16);
+	}
 }

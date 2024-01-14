@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.link-btn {
+	display: inline-block;
+	width: rem(200);
+	padding: rem(15) 0;
+	background:  linear-gradient(90deg, rgba(111, 247, 215, 1), rgba(99, 212, 225, 1) 30%, rgba(32, 175, 184, 1) 53%, rgba(252, 238, 171, 1) 90%);
+	background-position: 1% 50%;
+	background-size: 200% auto;
+	color: $white;
+	font-size: rem(18);
+	font-weight: 700;
+	font-style: italic;
+	font-family: $en-font;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	text-align: center;
+	transition: background 0.3s ease-out;
+	box-shadow: 0px 10px 10px -6px rgba(24, 75, 82, 0.3);
+	@include mq(md){
+		font-size: rem(22);
+	}
+}
+
+.link-btn:hover {
+	background-position: 99% 50%;
+}
