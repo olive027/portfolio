@@ -7,10 +7,21 @@
 	}
 }
 
+.info-list.info-list--works {
+	margin-top: rem(50);
+}
+
 .info-list__item:nth-child(n+2) {
 	margin-top: rem(40);
 	@include mq(md){
 		margin-top: rem(60);
+	}
+}
+
+.info-list__item--works:nth-child(n+2) {
+	margin-top: rem(20);
+	@include mq(md){
+		margin-top: rem(30);
 	}
 }
 
@@ -39,6 +50,13 @@
 	transform: translateY(-50%);
 }
 
+.info-list__head--works {
+	font-size: rem(16);
+	@include mq(md){
+		font-size: rem(18);
+	}
+}
+
 .info-list__text {
 	margin-top: rem(10);
 	font-size: rem(14);
@@ -49,4 +67,17 @@
 		font-size: rem(16);
 		line-height: 1.8;
 	}
+}
+
+.info-list__text.info-list__text--works {
+	margin-top: 0;
+}
+
+.info-list__github {
+	text-decoration: underline;
+	color: #4b8596;
+}
+
+.info-list__github:hover {
+	opacity: .6;
 }
