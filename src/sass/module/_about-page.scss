@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.about-page__body {
+	margin-top: rem(60);
+	@include mq(md){
+		margin-top: rem(120);
+		display: flex;
+		justify-content: center;
+		gap: rem(80);
+	}
+}
+
+.about-page__image {
+	width: rem(120);
+	aspect-ratio: 220 / 300;
+	margin-inline: auto;
+	@include mq(md){
+		margin-inline: initial;
+	}
+}
+
+.about-page__image img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.about-page__list.info-list {
+	@include mq(md){
+		width: 70%;
+		margin-top: 0;
+	}
+}

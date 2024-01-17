@@ -4,7 +4,6 @@
 	position: relative;
 	margin-top: rem(60);
 	@include mq(md){
-		
 		margin-top: rem(80);
 	}
 }
@@ -12,8 +11,27 @@
 .skill__image	{
 	width: 80%;
 	margin-inline: auto;
+	
 	@include mq(md){
 		width: 60%;
+	}
+}
+
+.skill__image::after {
+	display: inline-block;
+	content: '';
+	width: rem(225);
+	height: rem(355);
+	background: #f7e2df;
+	position: absolute;
+	top: -4%;
+	left: 4%;
+	z-index: -1;
+	@include mq(md){
+		width: rem(600);
+		height: rem(478);
+		top: 17%;
+		left: 30%;
 	}
 }
 
@@ -28,7 +46,7 @@
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-right-color: rgba(255, 255, 255, 0.2);
 	border-bottom-color: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(rem(14));
+	backdrop-filter: blur(rem(20));
 	box-shadow: 0 rem(5) rem(20) rgba(000, 000, 000, 0.2);
 	margin-top: rem(-40);
 	padding: rem(25) rem(20);

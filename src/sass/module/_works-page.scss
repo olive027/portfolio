@@ -1,9 +1,17 @@
 @use "global" as *;
-
-.works-page__content {
+.works-page__container {
 	margin-top: rem(60);
 	@include mq(md){
 		margin-top: rem(80);
+	}
+}
+
+.works-page__content:nth-of-type(n+2) {
+	margin-top: rem(100);
+	// border-top: 1px solid #ccc;
+	@include mq(md){
+		margin-top: rem(140);
+		// border: none;
 	}
 }
 
@@ -11,6 +19,7 @@
 	@include mq(md){
 		display: flex;
 		align-items: flex-start;
+		gap: rem(50);
 	}
 }
 
@@ -22,14 +31,14 @@
 
 .works-page__left {
 	@include mq(md){
-		width: 70%;
+		width: 60%;
 	}
 }
 .works-page__right {
 	margin-top: rem(10);
 	@include mq(md){
-		width: 30%;
-		margin-top: rem(42);
+		width: 40%;
+		// margin-top: rem(42);
 	}
 }
 
