@@ -8,6 +8,8 @@
 		justify-content: center;
 		align-items: center;
 		gap: rem(60);
+		width: 80%;
+		margin-inline: auto;
 	}
 }
 
@@ -15,6 +17,7 @@
 	width: rem(120);
 	aspect-ratio: 220 / 300;
 	margin-inline: auto;
+	flex-shrink: 0;
 	@include mq(md){
 		margin-inline: initial;
 	}

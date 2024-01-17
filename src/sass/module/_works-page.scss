@@ -66,6 +66,6 @@
 	text-align: center;
 	margin-top: rem(40);
 	@include mq(md){
-		margin-top: 0;
+		margin-top: rem(20);
 	}
 }
