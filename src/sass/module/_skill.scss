@@ -17,23 +17,22 @@
 	}
 }
 
-.skill__image::after {
-	display: inline-block;
-	content: '';
-	width: rem(225);
-	height: rem(355);
-	background: #f7e2df;
-	position: absolute;
-	top: -4%;
-	left: 4%;
-	z-index: -1;
-	@include mq(md){
-		width: rem(600);
-		height: rem(478);
-		top: 17%;
-		left: 30%;
-	}
-}
+// .skill__image::after {
+// 	display: inline-block;
+// 	content: '';
+// 	width: 100vw;
+// 	height: rem(200);
+// 	margin: 0 calc(50% - 50vw);
+// 	background: #f7e2df;
+// 	position: absolute;
+// 	top: 24%;
+// 	z-index: -1;
+// 	@include mq(md){
+// 		width: 100vw;
+// 		height: rem(280);
+// 		top: 50%;
+// 	}
+// }
 
 .skill_image img {
 	width: 100%;
@@ -55,7 +54,7 @@
 		padding: rem(50);
 		position: absolute;
 		top: 70%;
-		left: 40%;
+		
 	}
 }
 

@@ -6,7 +6,10 @@
 }
 
 .item__image {
-	height: rem(210);
+	@include mq(md){
+		aspect-ratio: 340 / 210;
+	}// width: rem(340);
+	
 }
 
 .item__image img {
