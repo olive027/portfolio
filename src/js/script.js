@@ -9,7 +9,7 @@ $('.js-hamburger').click(function(){
 })
 
 //mv
-var Title = document.querySelectorAll('.js-title');
+var Title = document.querySelectorAll('.js-subtitle');
 Title.forEach((target) => {
 	// h2タグ内のテキストを一文字ずつ分割
 	target.innerHTML = target.textContent.replace(/\S/g,'<span>$&</span>')
@@ -23,11 +23,30 @@ gsap.utils.toArray(Title).forEach((t) => {
 	});
 });
 
-gsap.to('.js-header', 0.8, {
-	delay: 1.2,
+var tl = gsap.timeline();
+tl.to('.js-title', 0.8, {
+  delay: 1.8,
+  autoAlpha: 1,
+  y: 0,
+})
+tl.to('.js-header', 0.8, {
 	autoAlpha: 1,
 	y: 0,
-})
+});
+
+
+// swiper
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  speed: 1700,
+  allowTouchMove: false,
+});
+
 
 //スクロールしたらheaderに背景色
 var Header = $(".header");

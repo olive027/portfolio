@@ -18,6 +18,11 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="icon" href="" />
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -57,25 +62,32 @@
   <main>
     <div class="mv js-mv">
       <div class="mv__inner">
-        <div class="mv__image-wrap">
-          <figure class="mv__image fadeIn">
-            <img src="./assets/images/common/mv_image4-tanesashi.jpg" alt="種差海岸の画像">
-          </figure>
-          <figure class="mv__image fadeIn">
-            <img src="./assets/images/common/mv_image1-aso.jpg" alt="阿蘇ミルクロードの夜明けの画像">
-          </figure>
-          <figure class="mv__image fadeIn">
-            <img src="./assets/images/common/mv_image5-hakodate.jpg" alt="冬の函館五稜郭の画像">
-          </figure>
-          <figure class="mv__image fadeIn">
-            <img src="./assets/images/common/mv_image3-biei.jpg" alt="美瑛のパッチワーク農地の画像">
-          </figure>
-          <figure class="mv__image fadeIn">
-            <img src="./assets/images/common/mv_image2-hirosaki.jpg" alt="満開の桜と弘前城のお濠の画像">
-          </figure>
+        <div class="mv__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="mv__image swiper-slide">
+              <img src="./assets/images/common/mv_image4-tanesashi.jpg" alt="種差海岸の画像">
+              <div class="swiper-caption">青森県&nbsp;種差海岸</div>
+            </div>
+            <div class="mv__image swiper-slide">
+              <img src="./assets/images/common/mv_image1-aso.jpg" alt="阿蘇ミルクロードの夜明けの画像">
+              <div class="swiper-caption">熊本県&nbsp;阿蘇</div>
+            </div>
+            <div class="mv__image swiper-slide">
+              <img src="./assets/images/common/mv_image5-hakodate.jpg" alt="冬の函館五稜郭の画像">
+              <div class="swiper-caption swiper-caption--green">北海道&nbsp;函館</div>
+            </div>
+            <div class="mv__image swiper-slide">
+              <img src="./assets/images/common/mv_image3-biei.jpg" alt="美瑛のパッチワーク農地の画像">
+              <div class="swiper-caption">北海道&nbsp;美瑛</div>
+            </div>
+            <div class="mv__image swiper-slide">
+              <img src="./assets/images/common/mv_image2-hirosaki.jpg" alt="満開の桜と弘前城のお濠の画像">
+              <div class="swiper-caption">青森県&nbsp;弘前</div>
+            </div>
+          </div>
         </div>
         <div class="mv__title-wrap">
-          <p class="mv__subtitle js-subtitle">kondo sayaka</p>
+          <p class="mv__subtitle js-subtitle">Kondo Sayaka</p>
           <h1 class="mv__title js-title">Portfolio</h1>
         </div>
       </div>
@@ -136,7 +148,6 @@
     <section class="skill top-skill">
       <div class="skill__inner inner">
         <h2 class="skill__title section-title">skill</h2>
-        <div class="skill__bg"></div>
         <div class="skill__body">
           <div class="skill__image">
             <img src="./assets/images/common/skill-image.jpg" alt="パソコンを操作する女性の手の画像">
@@ -188,6 +199,8 @@
   </div>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>

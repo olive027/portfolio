@@ -1,7 +1,10 @@
 @use "global" as *;
 
+.skill {
+	background: linear-gradient(transparent 35%,#fff0f0 35%,#fff0f0 65%, transparent 65%);
+}
+
 .skill__body {
-	position: relative;
 	margin-top: rem(60);
 	@include mq(md){
 		margin-top: rem(80);
@@ -11,28 +14,11 @@
 .skill__image	{
 	width: 80%;
 	margin-inline: auto;
-	
 	@include mq(md){
-		width: 51%;
+		max-width: rem(600);
+		width: 43%;
 	}
 }
-
-// .skill__image::after {
-// 	display: inline-block;
-// 	content: '';
-// 	width: 100vw;
-// 	height: rem(200);
-// 	margin: 0 calc(50% - 50vw);
-// 	background: #f7e2df;
-// 	position: absolute;
-// 	top: 24%;
-// 	z-index: -1;
-// 	@include mq(md){
-// 		width: 100vw;
-// 		height: rem(280);
-// 		top: 50%;
-// 	}
-// }
 
 .skill_image img {
 	width: 100%;
@@ -47,14 +33,12 @@
 	border-bottom-color: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(rem(20));
 	box-shadow: 0 rem(5) rem(20) rgba(000, 000, 000, 0.2);
-	margin-top: rem(-24);
 	padding: rem(25) rem(20);
 	@include mq(md){
-		width: 50%;
-		padding: rem(50);
-		position: absolute;
-		top: 70%;
-		
+		width: 48%;
+		padding: rem(40) rem(50);
+		margin-top: rem(-45);
+		margin-inline: auto;
 	}
 }
 

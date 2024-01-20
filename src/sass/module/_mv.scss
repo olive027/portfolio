@@ -1,76 +1,59 @@
 @use "global" as *;
 
-.mv{
+.mv {
 	position: relative;
-}
-
-.mv__image-wrap {
 	width: 100%;
-	height: 70vh;
-	height: 70dvh;
-	margin-top: rem(95);
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	@include mq(md){
-		max-width: rem(1200);
-		margin-top: rem(75);
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(4, 1fr);
-		gap: rem(10);
-	}
+	height: 100vh;
+	height: 100dvh;
+	overflow: hidden;
 }
 
-.mv__image img {
+.mv__inner,
+.mv__slider,
+.swiper-wrapper,
+.swiper-slide {
+	height: inherit;
+	width: 100%;
+}
+
+@keyframes zoomUp {
+	0% {
+		transform: scale(1);
+  }
+  100% {
+		transform: scale(1.1);
+  }
+}
+.swiper-slide-active img,
+.swiper-slide-duplicate-active img,
+.swiper-slide-prev img {
+	animation: zoomUp 7s linear 0s normal both;
+}
+
+.swiper-slide img {
+	aspect-ratio: 375 / 667;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-.mv__image:nth-of-type(1) {
-	grid-column: 1/2;
-	grid-row: 1/2;
+	position: relative;
 	@include mq(md){
-		grid-column: 3/4;
-		grid-row: 1/2;
+		aspect-ratio: 1440 / 768;
 	}
 }
 
-.mv__image:nth-of-type(2) {
-	grid-column: 3/4;
-	grid-row: 1/2;
-	@include mq(md){
-		grid-column: 1/2;
-		grid-row: 2/3;
-	}
+.swiper-caption {
+	font-size: rem(15);
+	letter-spacing: 0.05em;
+	// font-weight: $bold;
+	color: $white;
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+	z-index: 2;
 }
 
-.mv__image:nth-of-type(3) {
-	grid-column: 2/3;
-	grid-row: 2/3;
-	@include mq(md){
-		grid-column: 5/6;
-		grid-row: 3/4;
-	}
-}
-
-.mv__image:nth-of-type(4) {
-	grid-column: 1/2;
-	grid-row: 3/4;
-	@include mq(md){
-		grid-column: 2/3;
-		grid-row: 4/5;
-	}
-}
-
-.mv__image:nth-of-type(5) {
-	grid-column: 3/4;
-	grid-row: 3/4;
-	@include mq(md){
-		grid-column: 4/5;
-		grid-row: 4/5;
-	}
+.swiper-caption--green {
+	color: $green;
 }
 
 .mv__title-wrap {
@@ -81,13 +64,14 @@
 	transform: translate(-50%,-50%);
 	text-align: center;
 	font-family: $en-font;
+	z-index: 2;
 }
 
 .mv__subtitle {
 	text-transform: capitalize;
 	font-size: clamp(2rem, 1.384rem + 2.63vw, 3.75rem);
-	font-weight: $normal;
-	letter-spacing: 0.05em;
+	font-style: italic;
+	letter-spacing: 0.03em;
 	color: $green;
 	text-shadow: 4px 3px 5px rgba(26, 44, 52, 0.55);
 }
@@ -98,9 +82,12 @@
 	letter-spacing: 0.03em;
 	color: $green;
 	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.64);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(100%);
 }
 
-.mv__title span {
+.mv__subtitle span {
 	opacity: 0;
 	visibility: hidden;
 	transform: translateX(-100%);
