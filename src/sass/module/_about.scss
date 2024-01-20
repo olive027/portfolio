@@ -31,12 +31,12 @@
 
 .about__text {
 	margin-top: rem(20);
-	padding: 0 rem(5);
+	padding: 0 rem(15);
 	font-size: rem(14);
 	font-weight: $normal;
 	line-height: 2;
 	letter-spacing: 0.05em;
-	text-align: center;
+	text-align: justify;
 	@include mq(md){
 		padding: 0;
 		margin-top: 0;

@@ -68,12 +68,11 @@
 }
 
 .mv__subtitle {
-	text-transform: capitalize;
 	font-size: clamp(2rem, 1.384rem + 2.63vw, 3.75rem);
 	font-style: italic;
 	letter-spacing: 0.03em;
 	color: $green;
-	text-shadow: 4px 3px 5px rgba(26, 44, 52, 0.55);
+	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.65);
 }
 
 .mv__title {
