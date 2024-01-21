@@ -18,6 +18,7 @@
 	aspect-ratio: 220 / 300;
 	margin-inline: auto;
 	flex-shrink: 0;
+	position: relative;
 	@include mq(md){
 		margin-inline: initial;
 	}
@@ -27,10 +28,35 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	box-shadow: 2px 3px 5px 0px rgba(72, 69, 71, 0.35);
+}
+
+.about__image::after {
+	display: inline-block;
+	content: '';
+	width: rem(120);
+	height: rem(120);
+	background: #fff0f0;
+	position: absolute;
+	bottom: -13%;
+	right: -16%;
+	z-index: -1;
+}
+
+.about__image::before {
+	display: inline-block;
+	content: '';
+	width: rem(60);
+	height: rem(60);
+	background: #fff0f0;
+	position: absolute;
+	top: -9%;
+	left: -12%;
+	z-index: -1;
 }
 
 .about__text {
-	margin-top: rem(20);
+	margin-top: rem(40);
 	padding: 0 rem(15);
 	font-size: rem(14);
 	font-weight: $normal;

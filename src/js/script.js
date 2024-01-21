@@ -59,7 +59,7 @@ $(window).scroll(function(){
 	}
 });
 
-// ========================== ページトップボタン============================
+// ページトップボタン
 $(function () {
   const pageTop = $(".pagetop");
   pageTop.hide(); // 最初はボタンを非表示にする
@@ -83,39 +83,40 @@ $(function () {
 });
 
 // works説明文のアニメーション
-// gsap.utils.toArray('.js-work').forEach(target => {
-// gsap.fromTo(target, 1, {
-// 	autoAlpha: 0,
-// 	y: "100%",
-// },{
-// 	scrollTrigger: {
-// 	trigger: target,
-// 	start: 'top 85%',
-// 	// markers: true,
-// 	},
-// 	autoAlpha: 1,
-// 	y: 0,
-// });
+gsap.utils.toArray('.js-work').forEach(target => {
+gsap.fromTo(target, 1, {
+	autoAlpha: 0,
+	y: "100%",
+},{
+	scrollTrigger: {
+	trigger: target,
+	start: 'top 85%',
+	// markers: true,
+	},
+	autoAlpha: 1,
+	y: 0,
+});
 
-// });
+});
 
 // アンカーリンクのジャンプ位置調整
-$(function () {
-  // ヘッダーの高さを取得
-  const Height = $(".header").height();
-  // ヘッダーの高さ分コンテンツを下げる
-  $(".works-page__content").css("padding-top", Height);
-  // ページ内スクロール
-  $('a[href^="#"]').click(function () {
-    const speed = 600;
-    let href = $(this).attr("href");
-    let target = $(href == "#" || href == "" ? "html" : href);
-    // ヘッダーの高さ分下げる
-    let position = target.offset().top - Height;
-    $("body,html").animate({ scrollTop: position }, speed, "swing");
-    return false;
-  });
+$(function() {
+    let pageHash = window.location.hash;
+    if (pageHash) {
+        let scrollToElement = $('[data-id="' + pageHash + '"]');
+        if (!scrollToElement.length) return;
+        $(window).on('load', function() {
+            history.replaceState('', '', './');
+            let locationOffset = scrollToElement.offset().top;
+            let navigationBarHeight = $('.header').innerHeight();
+            locationOffset = locationOffset - navigationBarHeight - 65;
+            $('html, body').animate({
+                scrollTop: locationOffset
+            }, 300, 'swing');
+        });
+    }
 });
+
 
 
 
