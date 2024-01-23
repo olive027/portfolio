@@ -62,16 +62,20 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	// top: 0;
+	// bottom: 0;
+	// margin: auto;
 	text-align: center;
+	color: $green;
 	font-family: $en-font;
 	z-index: 2;
+	// mix-blend-mode: difference;
 }
 
 .mv__subtitle {
 	font-size: clamp(2rem, 1.384rem + 2.63vw, 3.75rem);
 	font-style: italic;
 	letter-spacing: 0.03em;
-	color: $green;
 	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.65);
 }
 
@@ -79,7 +83,6 @@
 	font-size: rem(30);
 	font-weight: $normal;
 	letter-spacing: 0.03em;
-	color: $green;
 	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.64);
 	opacity: 0;
 	visibility: hidden;

@@ -14,15 +14,51 @@
 	width: rem(120);
 	aspect-ratio: 220 / 300;
 	margin-inline: auto;
+	position: relative;
 	@include mq(md){
 		margin-inline: initial;
+	}
+}
+
+.about-page__image::after {
+	display: inline-block;
+	content: '';
+	width: rem(120);
+	height: rem(120);
+	background: #fff0f0;
+	position: absolute;
+	bottom: -9%;
+	right: -21%;
+	z-index: -1;
+	@include mq(md){
+		top: 8%;
+		right: -16%;
+	}
+}
+
+.about-page__image::before {
+	display: inline-block;
+	content: '';
+	width: rem(60);
+	height: rem(60);
+	background: #fff0f0;
+	position: absolute;
+	top: -8%;
+	left: -17%;
+	z-index: -1;
+	@include mq(md){
+		top: -2%;
+		left: -12%;
+		
 	}
 }
 
 .about-page__image img {
 	width: 100%;
 	object-fit: cover;
+	box-shadow: 2px 3px 5px 0px rgba(72, 69, 71, 0.35);
 }
+
 
 .about-page__list.info-list {
 	@include mq(md){

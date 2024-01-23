@@ -83,21 +83,21 @@ $(function () {
 });
 
 // works説明文のアニメーション
-gsap.utils.toArray('.js-work').forEach(target => {
-gsap.fromTo(target, 1, {
-	autoAlpha: 0,
-	y: "100%",
-},{
-	scrollTrigger: {
-	trigger: target,
-	start: 'top 85%',
-	// markers: true,
-	},
-	autoAlpha: 1,
-	y: 0,
-});
+// gsap.utils.toArray('.js-work').forEach(target => {
+// gsap.fromTo(target, 1, {
+// 	autoAlpha: 0,
+// 	y: "100%",
+// },{
+// 	scrollTrigger: {
+// 	trigger: target,
+// 	start: 'top 85%',
+// 	markers: true,
+// 	},
+// 	autoAlpha: 1,
+// 	y: 0,
+// });
 
-});
+// });
 
 // アンカーリンクのジャンプ位置調整
 $(function() {
