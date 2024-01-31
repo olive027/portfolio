@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.item:hover .item__image img {
+.item a:hover .item__image img {
 	opacity: .7;
 	transform: scale(1.08);
 }
