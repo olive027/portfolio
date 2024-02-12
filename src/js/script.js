@@ -28,7 +28,7 @@ gsap.utils.toArray(".js-item").forEach((item) => {
       ease: "none",
       scrollTrigger: {
         trigger: item,
-        start: "top 60%",
+        start: "top 58%",
         toggleActions:'play none none reverse',
       },
     }
