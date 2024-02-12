@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.container {
+	background: $white;
+	padding-top: rem(75);
+	@include mq(md){
+		padding-top: rem(120);
+	}
+}

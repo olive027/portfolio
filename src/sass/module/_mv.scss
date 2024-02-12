@@ -6,91 +6,34 @@
 	height: 100vh;
 	height: 100dvh;
 	overflow: hidden;
+	background-image: linear-gradient(180deg, rgba(197, 253, 253, 1), rgba(238, 255, 255, 1) 33%, rgba(209, 255, 255, 1) 76%, rgba(223, 255, 255, 1));
 }
 
-.mv__inner,
-.mv__slider,
-.swiper-wrapper,
-.swiper-slide {
+.mv__inner {
 	height: inherit;
 	width: 100%;
 }
 
-@keyframes zoomUp {
-	0% {
-		transform: scale(1);
-  }
-  100% {
-		transform: scale(1.1);
-  }
-}
-.swiper-slide-active img,
-.swiper-slide-duplicate-active img,
-.swiper-slide-prev img {
-	animation: zoomUp 7s linear 0s normal both;
-}
-
-.swiper-slide img {
-	aspect-ratio: 375 / 667;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	position: relative;
-	@include mq(md){
-		aspect-ratio: 1440 / 768;
-	}
-}
-
-.swiper-caption {
-	font-size: rem(15);
-	letter-spacing: 0.05em;
-	// font-weight: $bold;
-	color: $white;
-	position: absolute;
-	bottom: 3%;
-	right: 3%;
-	z-index: 2;
-}
-
-.swiper-caption--green {
-	color: $green;
-}
-
-.mv__title-wrap {
-	width: 100%;
+#mv-title {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	// top: 0;
-	// bottom: 0;
-	// margin: auto;
-	text-align: center;
-	color: $green;
-	font-family: $en-font;
-	z-index: 2;
-	// mix-blend-mode: difference;
+	width: 70%;
+	@include mq(md){
+		width: 100%;
+	}
 }
 
-.mv__subtitle {
-	font-size: clamp(2rem, 1.384rem + 2.63vw, 3.75rem);
-	font-style: italic;
-	letter-spacing: 0.03em;
-	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.65);
+#mv-title path {
+	fill-opacity: 0; /*透過0で塗りの色が見えない状態*/
+	transition: fill-opacity .5s; /*0.5秒で色が付くアニメーション*/
+	fill: none; /*塗りの色*/
+	stroke: $green; /*線の色*/
 }
 
-.mv__title {
-	font-size: rem(30);
-	font-weight: $normal;
-	letter-spacing: 0.03em;
-	text-shadow: 2px 2px 3px rgba(26, 44, 52, 0.64);
-	opacity: 0;
-	visibility: hidden;
-	transform: translateY(100%);
-}
-
-.mv__subtitle span {
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(-100%);
+#mv-title.done path {
+	fill: $green; /*塗りの色*/
+	fill-opacity: 1; /*透過1で塗りの色が見える状態*/
+	stroke: none; /*線の色*/
 }

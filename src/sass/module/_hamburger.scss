@@ -5,6 +5,7 @@
 	height: rem(16);
 	position: relative;
 	z-index: 5000;
+	cursor: pointer;
 	@include mq(md){
 		display: none;
 	}

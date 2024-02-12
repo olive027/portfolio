@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .works-list {
-	margin-top: rem(60);
 	display: grid;
 	// grid-template-columns: repeat(1, 1fr);
 	grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
@@ -11,6 +10,5 @@
 		// grid-template-columns: repeat(3, 1fr);
 		column-gap: rem(40);
 		row-gap: rem(60);
-		margin-top: rem(80);
 	}
 }

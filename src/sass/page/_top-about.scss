@@ -2,7 +2,9 @@
 
 .top-about {
 	margin-top: rem(75);
+	margin-bottom: rem(75);
 	@include mq(md){
 		margin-top: rem(120);
+		margin-bottom: rem(120);
 	}
 }

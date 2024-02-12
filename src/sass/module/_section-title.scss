@@ -1,23 +1,30 @@
 @use "global" as *;
 
 .section-title {
-	font-size: clamp(1.875rem, 1.655rem + 0.94vw, 2.5rem);
-	font-family: $en-font;
-	text-transform: capitalize;
-	letter-spacing: 0.05em;
-	text-align: center;
-	color: $green;
-	position: relative;
+	display: inline-block;
 }
 
-.section-title::after {
-	display: inline-block;
-	content: '';
-	width: rem(25);
-	height: rem(1);
-	background-color: $green;
-	position: absolute;
-	bottom: -20%;
-	left: 50%;
-	transform: translateX(-50%);
+.section-title__image {
+	opacity: 0.4;
+	width: 80%;
+	@include mq(md){
+		width: 100%;
+	}
+}
+
+.section-title__image path {
+	fill-opacity: 0; /*透過0で塗りの色が見えない状態*/
+	transition: fill-opacity .5s; /*0.5秒で色が付くアニメーション*/
+	fill: none; /*塗りの色*/
+	stroke: $green; /*線の色*/
+}
+
+.section-title__image.done path {
+	fill: $green; /*塗りの色*/
+	fill-opacity: 1; /*透過1で塗りの色が見える状態*/
+	stroke: none; /*線の色*/
+}
+
+.section-title__page {
+	color: $green;
 }

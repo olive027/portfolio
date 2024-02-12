@@ -1,22 +1,43 @@
 @use "global" as *;
 
-.skill {
-	background: linear-gradient(transparent 35%,#fff0f0 35%,#fff0f0 65%, transparent 65%);
-}
-
+// .skill {
+// 	background: linear-gradient(transparent 35%,#fff0f0 35%,#fff0f0 65%, transparent 65%);
+// }
 .skill__body {
-	margin-top: rem(60);
 	@include mq(md){
-		margin-top: rem(80);
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
 	}
 }
 
 .skill__image	{
 	width: 80%;
+	position: relative;
+	z-index: 0;
 	margin-inline: auto;
 	@include mq(md){
 		max-width: rem(600);
 		width: 43%;
+		margin: inherit;
+		margin-left: rem(-128);
+	}
+}
+
+.skill__image::after {
+	content: '';
+	width: 103%;
+	height: 96%;
+	background: #fff0f0;
+	position: absolute;
+	top: -6%;
+	left: 5%;
+	z-index: -1;
+	@include mq(md){
+		width: 110%;
+		height: 75%;
+		top: 6%;
+		left: -23%;
 	}
 }
 
@@ -32,13 +53,13 @@
 	border-right-color: rgba(255, 255, 255, 0.2);
 	border-bottom-color: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(rem(20));
-	box-shadow: 0 rem(5) rem(20) rgba(000, 000, 000, 0.2);
+	box-shadow: rem(3) rem(3) rem(10) rgba(158, 158, 158, 0.2);
 	padding: rem(25) rem(20);
+	margin-top: rem(-40);
 	@include mq(md){
 		width: 48%;
 		padding: rem(40) rem(50);
-		margin-top: rem(-45);
-		margin-inline: auto;
+		margin-top: rem(120);
 	}
 }
 
@@ -48,7 +69,7 @@
 	line-height: 2;
 	letter-spacing: 0.05em;
 	@include mq(md){
-		font-size: rem(18);
+		font-size: rem(16);
 		letter-spacing: 0.03em;
 	}
 }

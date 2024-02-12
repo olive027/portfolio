@@ -1,17 +1,14 @@
 @use "global" as *;
 .works-page__container {
-	margin-top: rem(60);
 	@include mq(md){
-		margin-top: rem(80);
+		margin-top: rem(32);
 	}
 }
 
 .works-page__content:nth-of-type(n+2) {
 	margin-top: rem(100);
-	// border-top: 1px solid #ccc;
 	@include mq(md){
 		margin-top: rem(140);
-		// border: none;
 	}
 }
 

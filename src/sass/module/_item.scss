@@ -27,7 +27,13 @@
 	font-weight: $bold;
 	letter-spacing: 0.03em;
 	line-height: 1.2;
-	@include mq(md){
-		font-size: rem(16);
-	}
+}
+
+.js-fade {
+	opacity : 0;
+  transition : opacity 1s;
+}
+
+.js-fade.active{
+  opacity : 1;
 }

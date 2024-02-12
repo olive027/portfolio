@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .about-page__body {
-	margin-top: rem(60);
+	margin-top: rem(10);
 	@include mq(md){
-		margin-top: rem(120);
+		margin-top: rem(32);
 		display: flex;
 		justify-content: center;
 		gap: rem(80);
@@ -15,6 +15,7 @@
 	aspect-ratio: 220 / 300;
 	margin-inline: auto;
 	position: relative;
+	z-index: 0;
 	@include mq(md){
 		margin-inline: initial;
 	}
@@ -59,8 +60,8 @@
 	box-shadow: 2px 3px 5px 0px rgba(72, 69, 71, 0.35);
 }
 
-
-.about-page__list.info-list {
+.info-list.info-list--about {
+	margin-top: rem(40);
 	@include mq(md){
 		width: 70%;
 		margin-top: 0;
